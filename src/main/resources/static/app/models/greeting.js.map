@@ -1,0 +1,1 @@
+{"version":3,"file":"greeting.js","sourceRoot":"","sources":["greeting.ts"],"names":[],"mappings":";AAAA;IAEE,kBAAoB,EAAU,EAAS,OAAe;QAAlC,OAAE,GAAF,EAAE,CAAQ;QAAS,YAAO,GAAP,OAAO,CAAQ;IAAI,CAAC;IAE7D,eAAC;AAAD,CAAC,AAJD,IAIC;AAJY,4BAAQ","sourcesContent":["export class Greeting {\r\n  \r\n  constructor (public id: number, public content: string) { }\r\n\r\n}"]}
