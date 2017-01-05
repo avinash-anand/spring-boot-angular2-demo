@@ -11,9 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
-var greeting_service_1 = require("./service/greeting.service");
-var greeting_component_1 = require("./components/greeting.component");
+var greeting_service_1 = require("./greeting/greeting.service");
+var greeting_component_1 = require("./greeting/greeting.component");
 var app_component_1 = require("./app.component");
+// const appRoutes: Routes = [
+//   { path: 'login', component: LoginComponent }
+// ]
 var AppModule = (function () {
     function AppModule() {
     }

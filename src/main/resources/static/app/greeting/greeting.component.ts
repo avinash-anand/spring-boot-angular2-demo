@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { Greeting } from '../models/greeting';
-import { GreetingService } from '../service/greeting.service';
+import { Greeting } from './greeting';
+import { GreetingService } from './greeting.service';
 
 @Component({
   moduleId: module.id,
   selector: 'rest-data',
-  templateUrl: '../view/rest-data.html',
+  templateUrl: './rest-data.html',
   providers: [GreetingService]
 })
 

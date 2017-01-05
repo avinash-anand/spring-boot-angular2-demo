@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var greeting_service_1 = require("../service/greeting.service");
+var greeting_service_1 = require("./greeting.service");
 var GreetingComponent = (function () {
     function GreetingComponent(service) {
         this.service = service;
@@ -27,7 +27,7 @@ GreetingComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'rest-data',
-        templateUrl: '../view/rest-data.html',
+        templateUrl: './rest-data.html',
         providers: [greeting_service_1.GreetingService]
     }),
     __metadata("design:paramtypes", [greeting_service_1.GreetingService])
