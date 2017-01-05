@@ -16,9 +16,7 @@ export class GreetingService {
         return this.http.get(this.greetingUrl)
             .toPromise()
             .then(response => {
-                console.log("hello - " + JSON.stringify(response.json));
-                let greeting: Greeting = new Greeting(response.json().data.id, response.json().data.content);
-                return greeting;
+                return response.json() as Greeting;
             })
             .catch(this.handleError);
     }

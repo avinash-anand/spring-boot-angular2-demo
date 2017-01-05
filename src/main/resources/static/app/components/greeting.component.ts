@@ -19,7 +19,6 @@ export class GreetingComponent implements OnInit {
   displayGreeting() {
     this.service.getGreeting().then(data => {
     this.greeting = data;
-    console.log();
   });
   }
 
