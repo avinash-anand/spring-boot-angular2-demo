@@ -17,9 +17,7 @@ export class GreetingComponent implements OnInit {
   constructor(private service: GreetingService) { }
 
   displayGreeting() {
-    this.service.getGreeting().then(data => {
-    this.greeting = data;
-  });
+    this.service.getGreeting().then(data => this.greeting = data);
   }
 
   ngOnInit(): void {

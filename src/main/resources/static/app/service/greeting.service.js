@@ -19,9 +19,7 @@ var GreetingService = (function () {
     GreetingService.prototype.getGreeting = function () {
         return this.http.get(this.greetingUrl)
             .toPromise()
-            .then(function (response) {
-            return response.json();
-        })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     GreetingService.prototype.handleError = function (error) {

@@ -15,9 +15,7 @@ export class GreetingService {
     getGreeting(): Promise<Greeting> {
         return this.http.get(this.greetingUrl)
             .toPromise()
-            .then(response => {
-                return response.json() as Greeting;
-            })
+            .then(response => response.json() as Greeting)
             .catch(this.handleError);
     }
 

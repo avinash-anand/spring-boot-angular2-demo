@@ -16,9 +16,7 @@ var GreetingComponent = (function () {
     }
     GreetingComponent.prototype.displayGreeting = function () {
         var _this = this;
-        this.service.getGreeting().then(function (data) {
-            _this.greeting = data;
-        });
+        this.service.getGreeting().then(function (data) { return _this.greeting = data; });
     };
     GreetingComponent.prototype.ngOnInit = function () {
         this.displayGreeting();
