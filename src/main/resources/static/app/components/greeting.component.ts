@@ -5,6 +5,7 @@ import { Greeting } from '../models/greeting';
 import { GreetingService } from '../service/greeting.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'rest-data',
   templateUrl: '../view/rest-data.html',
   providers: [GreetingService]
@@ -13,10 +14,13 @@ import { GreetingService } from '../service/greeting.service';
 export class GreetingComponent implements OnInit {
   greeting: Greeting;
 
-  constructor(private service: GreetingService) {}
+  constructor(private service: GreetingService) { }
 
   displayGreeting() {
-    this.service.getGreeting().then(data => this.greeting = data);
+    this.service.getGreeting().then(data => {
+    this.greeting = data;
+    console.log();
+  });
   }
 
   ngOnInit(): void {

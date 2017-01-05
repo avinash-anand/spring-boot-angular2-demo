@@ -12,7 +12,9 @@ public class DemoController {
 	
 	@RequestMapping("/greeting")
 	public @ResponseBody Greeting greeting() {
-		return new Greeting(1, "Hello");
+		System.out.println("API called");
+		Greeting greeting = new Greeting(1, "Hello from Avinash");
+		return greeting;
 	}
 	
 }

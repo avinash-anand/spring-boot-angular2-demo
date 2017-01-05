@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/toPromise");
+var greeting_1 = require("../models/greeting");
 var GreetingService = (function () {
     function GreetingService(http) {
         this.http = http;
@@ -19,7 +20,11 @@ var GreetingService = (function () {
     GreetingService.prototype.getGreeting = function () {
         return this.http.get(this.greetingUrl)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) {
+            console.log("hello - " + JSON.stringify(response.json));
+            var greeting = new greeting_1.Greeting(response.json().data.id, response.json().data.content);
+            return greeting;
+        })
             .catch(this.handleError);
     };
     GreetingService.prototype.handleError = function (error) {

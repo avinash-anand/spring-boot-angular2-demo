@@ -16,7 +16,10 @@ var GreetingComponent = (function () {
     }
     GreetingComponent.prototype.displayGreeting = function () {
         var _this = this;
-        this.service.getGreeting().then(function (data) { return _this.greeting = data; });
+        this.service.getGreeting().then(function (data) {
+            _this.greeting = data;
+            console.log();
+        });
     };
     GreetingComponent.prototype.ngOnInit = function () {
         this.displayGreeting();
@@ -25,6 +28,7 @@ var GreetingComponent = (function () {
 }());
 GreetingComponent = __decorate([
     core_1.Component({
+        moduleId: module.id,
         selector: 'rest-data',
         templateUrl: '../view/rest-data.html',
         providers: [greeting_service_1.GreetingService]

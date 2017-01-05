@@ -1,5 +1,8 @@
 package com.example.models;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect
 public class Greeting {
 
 	private final long id;
